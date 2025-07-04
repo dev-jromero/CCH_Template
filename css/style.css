@@ -1,70 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-span{
-    margin-left: 7px;
+:root{
+    --color-dark-blue: #005fa3;
+    --text-white:#ffffff;
 }
 
-.card{
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 24px;
-    max-width: 320px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+.header-banner{
+    background: var(--color-dark-blue);
+    color: var(--text-white);
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.header-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #111827;
+.header-banner .info span {
+    margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.description {
-    margin: 8px 0 16px;
-    font-size: 0.95rem;
-    color: #6b7280;
+.header-banner .social a {
+    color: var(--text-white);
+    margin-left: 0.75rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.header-banner .social a:hover {
+    color: #ffcc00; /* amarillo en hover */
 }
 
-ul li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    color: #111827;
-}
 
-ul li::before {
-    content: "\f00c";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    color: #22c55e;
-    margin-right: 10px;
-}
+@media (max-width: 768px) {
+    .header-banner .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 
-.btn-blue{
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-}
-
-.btn-white{
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    color: rgb(43, 43, 43);
+    .header-banner .social {
+        align-self: flex-end;
+    }
 }
